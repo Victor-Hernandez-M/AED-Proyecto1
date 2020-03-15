@@ -8,10 +8,13 @@ class Convert:
     def convertTime(self,string):
         
         content = string.split(":")
-        seg = 0
-        seg += int(content[0])*3600
-        seg += int(content[1])*60
-        seg += int(content[2])
+        if (len(content)==3):
+            seg = 0
+            seg += int(content[0])*3600
+            seg += int(content[1])*60
+            seg += int(content[2])
+        else:
+            return False
         # print(seg)
         return seg
 
